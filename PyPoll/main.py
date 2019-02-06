@@ -32,7 +32,7 @@
 import os
 import csv
 
-'''# Set path for file
+# Set path for file
 csvpath = os.path.join("Resources","election_data.csv")
 
 with open(csvpath, newline="") as csvfile:
@@ -47,7 +47,8 @@ with open(csvpath, newline="") as csvfile:
     for row in csvreader:
         next(csvreader)
 
-        # A complete list of candidates who received votes
+        # A complete list of candidates who received votes and
+        # The total number of votes each candidate won
         if row[2] == "Correy":
             Correy = Correy + 1
         elif row[2] == "Khan":
@@ -60,15 +61,27 @@ with open(csvpath, newline="") as csvfile:
         # The total number of votes cast
         sum_vote = sum_vote + 1
         
-    return
+        # The percentage of votes each candidate won
+        Khan_percentage = Khan / sum_vote
+        Correy_percentage = Correy / sum_vote
+        Li_percentage = Li / sum_vote
+        OTooley_percentage = OTooley / sum_vote
+
+
+    print("Khan: " + str(Khan))
+    print(Correy)
+    print(Li)
+    print(OTooley)
+    print(sum_vote)
     
+    print("Khan: " + str(Khan_percentage))
+    print("Correy: " + str(Correy_percentage))
+    print("Li: " + str(Li_percentage))
+    print("O'Tooley: " + str(OTooley_percentage))
 
         
 
-# The total number of votes cast
 
-
-# A complete list of candidates who received votes
 
 
 # The percentage of votes each candidate won
@@ -79,9 +92,9 @@ with open(csvpath, newline="") as csvfile:
 
 # The winner of the election based on popular vote.  
 # 
-# '''
+# 
 
-output_path = os.path.join("Output", "PyPoll_output") 
+'''output_path = os.path.join("Output", "PyPoll_output") 
 with open(output_path, 'w', newline="") as csvfile:
     csvwriter = csv.writer(csvfile, delimiter=",")
 
@@ -95,7 +108,7 @@ with open(output_path, 'w', newline="") as csvfile:
     csvwriter.writerow(["O'Tooley: "])
     csvwriter.writerow(["-------------------------"])
     csvwriter.writerow(["Winner: "])
-
+'''
 '''
   Election Results
   -------------------------
@@ -107,4 +120,5 @@ with open(output_path, 'w', newline="") as csvfile:
   O'Tooley: 3.000% (105630)
   -------------------------
   Winner: Khan
-  -------------------------'''
+  -------------------------
+  '''
