@@ -69,7 +69,7 @@ print("Greatest Increase in Profits :" + str(great_date) + "$" +str(greatest_inc
 print("Greatest Decrease in Profits :" + str(worst_date) + "$" +str(greatest_decrease))
 
 
-'''output_path = 
+'''output_path = os.path.join("..", "Output", "PyBank_output")
 with open(output_path, "w",newline="") as csvfile:
     csvwriter = csv.writer(csvfile, delimiter=",")
     csvwriter.writerow(['Financial Analysis'])

@@ -32,18 +32,13 @@
 import os
 import csv
 
-# Set path for file
+'''# Set path for file
 csvpath = os.path.join("Resources","election_data.csv")
 
 with open(csvpath, newline="") as csvfile:
     csvreader = csv.reader(csvfile, delimiter=",")
 
-# The total number of votes cast
-total_votes = sum(int(electionCSV[0]))
-
-
-# A complete list of candidates who received votes
-    Correy_ = 0
+    Correy = 0
     Khan = 0
     Li = 0
     OTooley = 0
@@ -51,6 +46,8 @@ total_votes = sum(int(electionCSV[0]))
 
     for row in csvreader:
         next(csvreader)
+
+        # A complete list of candidates who received votes
         if row[2] == "Correy":
             Correy = Correy + 1
         elif row[2] == "Khan":
@@ -59,6 +56,8 @@ total_votes = sum(int(electionCSV[0]))
             Li = Li + 1
         elif row[2] == "O'Tooley":
             OTooley = OTooley + 1
+        
+        # The total number of votes cast
         sum_vote = sum_vote + 1
         
     return
@@ -67,7 +66,7 @@ total_votes = sum(int(electionCSV[0]))
         
 
 # The total number of votes cast
-total_votes = sum(int(electionCSV[1]))
+
 
 # A complete list of candidates who received votes
 
@@ -78,4 +77,34 @@ total_votes = sum(int(electionCSV[1]))
 # The total number of votes each candidate won    
 
 
-# The winner of the election based on popular vote.                                                                                             
+# The winner of the election based on popular vote.  
+# 
+# '''
+
+output_path = os.path.join("Output", "PyPoll_output") 
+with open(output_path, 'w', newline="") as csvfile:
+    csvwriter = csv.writer(csvfile, delimiter=",")
+
+    csvwriter.writerow(["Election Results"])
+    csvwriter.writerow(["-------------------------"])
+    csvwriter.writerow(["Total Votes: ", sum_vote])
+    csvwriter.writerow(["-------------------------"])
+    csvwriter.writerow(["Khan: "])
+    csvwriter.writerow(["Correy: "])
+    csvwriter.writerow(["Li: "])
+    csvwriter.writerow(["O'Tooley: "])
+    csvwriter.writerow(["-------------------------"])
+    csvwriter.writerow(["Winner: "])
+
+'''
+  Election Results
+  -------------------------
+  Total Votes: 3521001
+  -------------------------
+  Khan: 63.000% (2218231)
+  Correy: 20.000% (704200)
+  Li: 14.000% (492940)
+  O'Tooley: 3.000% (105630)
+  -------------------------
+  Winner: Khan
+  -------------------------'''
