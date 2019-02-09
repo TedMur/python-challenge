@@ -67,11 +67,22 @@ with open(csvpath, newline="") as csvfile:
         Li_percentage = Li / sum_vote
         OTooley_percentage = OTooley / sum_vote
 
+        # The total number of votes each candidate won  
+
+
+
+
+        # The winner of the election based on popular vote.  
+
+
+
+
+
 
     print("Khan: " + str(Khan))
-    print(Correy)
-    print(Li)
-    print(OTooley)
+    print("Correy: " + str(Correy))
+    print("Li: " + str(Li))
+    print("O'Tooley: " + str(OTooley))
     print(sum_vote)
     
     print("Khan: " + str(Khan_percentage))
@@ -81,18 +92,6 @@ with open(csvpath, newline="") as csvfile:
 
         
 
-
-
-
-# The percentage of votes each candidate won
-
-
-# The total number of votes each candidate won    
-
-
-# The winner of the election based on popular vote.  
-# 
-# 
 
 '''output_path = os.path.join("Output", "PyPoll_output") 
 with open(output_path, 'w', newline="") as csvfile:
