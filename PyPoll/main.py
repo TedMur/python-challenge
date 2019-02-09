@@ -62,13 +62,13 @@ with open(csvpath, newline="") as csvfile:
         sum_vote = sum_vote + 1
         
         # The percentage of votes each candidate won
-        Khan_percentage = Khan / sum_vote
-        Correy_percentage = Correy / sum_vote
-        Li_percentage = Li / sum_vote
-        OTooley_percentage = OTooley / sum_vote
+        Khan_percentage = round((Khan / sum_vote)*100, 3) # f string
+        Correy_percentage = (Correy / sum_vote)*100
+        Li_percentage = (Li / sum_vote)*100
+        OTooley_percentage = (OTooley / sum_vote)*100
 
         # The total number of votes each candidate won  
-
+        
 
 
 

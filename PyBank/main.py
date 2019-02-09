@@ -40,10 +40,10 @@ with open(csvpath, newline="") as csvfile:
     next(csvreader)
     for row in csvreader:
         total_months = total_months + 1
-        if int(row[1]) > greatest_increase: # Compare values before to find greatest incerase
+        if (int(row[1]) > greatest_increase): # Compare values before to find greatest incerase
             great_date = row[0]
             greatest_increase = int(row[1])
-        if int(row[1]) < greatest_increase:
+        if (int(row[1]) < greatest_increase):
             worst_date = row[0]
             greatest_decrease = int(row[1])
         total_amount = total_amount + int(row[1])  #Total revenue
