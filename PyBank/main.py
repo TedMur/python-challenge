@@ -15,15 +15,6 @@
 
 * As an example, your analysis should look similar to the one below:
 
-  text
-  Financial Analysis
-  ----------------------------
-  Total Months: 86
-  Total: $38382578
-  Average  Change: $-2315.12
-  Greatest Increase in Profits: Feb-2012 ($1926159)
-  Greatest Decrease in Profits: Sep-2013 ($-2196167)
-  ```
 
 * In addition, your final script should both print the analysis to the terminal and export a text file with the results.'''
 
@@ -68,6 +59,16 @@ print("Average Change: " + str(average_change))
 print("Greatest Increase in Profits :" + str(great_date) + "$" +str(greatest_increase))
 print("Greatest Decrease in Profits :" + str(worst_date) + "$" +str(greatest_decrease))
 
+
+'''  text
+  Financial Analysis
+  ----------------------------
+  Total Months: 86
+  Total: $38382578
+  Average  Change: $-2315.12
+  Greatest Increase in Profits: Feb-2012 ($1926159)
+  Greatest Decrease in Profits: Sep-2013 ($-2196167)
+'''
 
 '''output_path = os.path.join("..", "Output", "PyBank_output")
 with open(output_path, "w",newline="") as csvfile:
