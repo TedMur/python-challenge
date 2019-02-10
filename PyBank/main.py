@@ -42,7 +42,7 @@ with open(csvpath, newline="") as csvfile:
 
 
     for row in csvreader:
-        print(float(row[1]))
+        #print(float(row[1]))
         total_months = total_months + 1
         if (greatest_increase < float(row[1])): # Compare values before to find greatest incerase
             great_date = row[0]
@@ -60,8 +60,8 @@ print('---------------------------------')
 print(f"Total Months: {total_months}")
 print(f"Total: ${total_amount}")
 print(f"Average Change: ${average_change}")
-print(f"Greatest Increase in Profits : {great_date} ${greatest_increase}")
-print(f"Greatest Decrease in Profits : {worst_date} ${greatest_decrease}")
+print(f"Greatest Increase in Profits : {great_date} (${greatest_increase})")
+print(f"Greatest Decrease in Profits : {worst_date} (${greatest_decrease})")
 
 
 '''  text
@@ -88,7 +88,7 @@ with open(output_path, "w",newline="") as csvfile:
 
 
 
-# hosted_in_us["goal"] = hosted_in_us["goal"].astype(float).map("${:,.2f}".format)
+
 
 
 
