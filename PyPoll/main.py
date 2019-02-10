@@ -65,30 +65,28 @@ with open(csvpath, newline="") as csvfile:
         
         sum_vote = sum_vote + 1
         
-        '''# The percentage of votes each candidate won
+        # The percentage of votes each candidate won
         Khan_percentage = round((Khan / sum_vote)*100, 3)
         Correy_percentage = round((Correy / sum_vote)*100, 3)
         Li_percentage = round((Li / sum_vote)*100, 3)
-        OTooley_percentage = round((OTooley / sum_vote)*100, 3)'''
+        OTooley_percentage = round((OTooley / sum_vote)*100, 3)
 
         
         # The winner of the election based on popular vote.  
-        candidates_dict = [Correy, Khan, Li, OTooley]
-        winner = max(candidates_dict)
+        candidates_dict = {"Correy": int(Correy), "Khan": int(Khan), "Li": int(Li), "O'Tooley": int(OTooley)}
+        winner = max(candidates_dict, key=candidates_dict.get)
         
 
     print("Election Results")
     print("-------------------------")
     print(f"Total Votes: {sum_vote}")
     print("-------------------------")
-    '''
     print(f"Khan: {Khan_percentage}% ({Khan})")
     print(f"Correy: {Correy_percentage}% ({Correy})")
     print(f"Li: {Li_percentage}% ({Li})")
     print(f"O'Tooley:  {OTooley_percentage}% ({OTooley})")
-    '''
     print("-------------------------")
-    print("Winner: {winner}")
+    print(f"Winner: {winner}")
     print("-------------------------")
         
 
