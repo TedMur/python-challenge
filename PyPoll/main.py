@@ -66,19 +66,16 @@ with open(csvpath, newline="") as csvfile:
         sum_vote = sum_vote + 1
         
         # The percentage of votes each candidate won
-        Khan_percentage = round((Khan / sum_vote)*100, 3) # f string
+        Khan_percentage = round((Khan / sum_vote)*100, 3)
         Correy_percentage = round((Correy / sum_vote)*100, 3)
         Li_percentage = round((Li / sum_vote)*100, 3)
         OTooley_percentage = round((OTooley / sum_vote)*100, 3)
 
-        # The total number of votes each candidate won  
         
-
-
-
         # The winner of the election based on popular vote.  
-
+        winner = 
         
+
     print("Election Results")
     print("-------------------------")
     print("Total Votes: ", sum_vote)
@@ -88,22 +85,8 @@ with open(csvpath, newline="") as csvfile:
     print("Li: " + str(Li_percentage) + "% (" + str(Li) + ")")
     print("O'Tooley: " + str(OTooley_percentage) + "% (" + str(OTooley) + ")")
     print("-------------------------")
-    print(["Winner: "])
+    print("Winner: ")
     print("-------------------------")
-
-
-
-    print("Khan: " + str(Khan))
-    print("Correy: " + str(Correy))
-    print("Li: " + str(Li))
-    print("O'Tooley: " + str(OTooley))
-    print(sum_vote)
-    
-    print("Khan: " + str(Khan_percentage))
-    print("Correy: " + str(Correy_percentage))
-    print("Li: " + str(Li_percentage))
-    print("O'Tooley: " + str(OTooley_percentage))
-
         
 
 
@@ -122,16 +105,3 @@ with open(output_path, 'w', newline="") as csvfile:
     csvwriter.writerow(["-------------------------"])
     csvwriter.writerow(["Winner: "])
 '''
-'''
-  Election Results
-  -------------------------
-  Total Votes: 3521001
-  -------------------------
-  Khan: 63.000% (2218231)
-  Correy: 20.000% (704200)
-  Li: 14.000% (492940)
-  O'Tooley: 3.000% (105630)
-  -------------------------
-  Winner: Khan
-  -------------------------
-  '''

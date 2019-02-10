@@ -57,11 +57,11 @@ with open(csvpath, newline="") as csvfile:
 
 print('Financial Analysis')
 print('---------------------------------')
-print("Total Months: " + round(str(total_months), 2))
-print("Total: $" + str(total_amount))
-print("Average Change: $" + str(average_change))
-print("Greatest Increase in Profits : " + str(great_date) + " $" +str(greatest_increase))
-print("Greatest Decrease in Profits : " + str(worst_date) + " $" +str(greatest_decrease))
+print(f"Total Months: {total_months}")
+print(f"Total: ${total_amount}")
+print(f"Average Change: ${average_change}")
+print(f"Greatest Increase in Profits : {great_date} ${greatest_increase}")
+print(f"Greatest Decrease in Profits : {worst_date} ${greatest_decrease}")
 
 
 '''  text
