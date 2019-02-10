@@ -91,18 +91,18 @@ with open(csvpath, newline="") as csvfile:
         
 
 
-'''output_path = os.path.join("Output", "PyPoll_output") 
+output_path = os.path.join("Output", "PyPoll_output") 
 with open(output_path, 'w', newline="") as csvfile:
     csvwriter = csv.writer(csvfile, delimiter=",")
 
     csvwriter.writerow(["Election Results"])
     csvwriter.writerow(["-------------------------"])
-    csvwriter.writerow(["Total Votes: ", sum_vote])
+    csvwriter.writerow([f"Total Votes: {sum_vote}"])
     csvwriter.writerow(["-------------------------"])
-    csvwriter.writerow(["Khan: "])
-    csvwriter.writerow(["Correy: "])
-    csvwriter.writerow(["Li: "])
-    csvwriter.writerow(["O'Tooley: "])
+    csvwriter.writerow([f"Khan: {Khan_percentage}% ({Khan})"])
+    csvwriter.writerow([f"Correy: {Correy_percentage}% ({Correy})"])
+    csvwriter.writerow([f"Li: {Li_percentage}% ({Li})"])
+    csvwriter.writerow([f"O'Tooley:  {OTooley_percentage}% ({OTooley})"])
     csvwriter.writerow(["-------------------------"])
-    csvwriter.writerow(["Winner: "])
-'''
+    csvwriter.writerow([f"Winner: {winner}"])
+    csvwriter.writerow(["-------------------------"])
