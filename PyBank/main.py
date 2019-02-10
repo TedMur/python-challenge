@@ -37,13 +37,17 @@ worst_date = ''
 
 with open(csvpath, newline="") as csvfile:
     csvreader = csv.reader(csvfile, delimiter=",")
-    next(csvreader)
+    next(csvreader, None)
+
+
+
     for row in csvreader:
+        print(float(row[1]))
         total_months = total_months + 1
-        if (int(row[1]) > greatest_increase): # Compare values before to find greatest incerase
+        if (greatest_increase < float(row[1])): # Compare values before to find greatest incerase
             great_date = row[0]
-            greatest_increase = int(row[1])
-        if (int(row[1]) < greatest_increase):
+            greatest_increase = float(row[1])
+        if (greatest_increase > float(row[1])):
             worst_date = row[0]
             greatest_decrease = int(row[1])
         total_amount = total_amount + int(row[1])  #Total revenue
@@ -54,10 +58,10 @@ average_change = total_amount / total_months
 print('Financial Analysis')
 print('---------------------------------')
 print("Total Months: " + str(total_months))
-print("Total: " + str(total_amount))
-print("Average Change: " + str(average_change))
-print("Greatest Increase in Profits :" + str(great_date) + "$" +str(greatest_increase))
-print("Greatest Decrease in Profits :" + str(worst_date) + "$" +str(greatest_decrease))
+print("Total: $" + str(total_amount))
+print("Average Change: $" + str(average_change))
+print("Greatest Increase in Profits : " + str(great_date) + " $" +str(greatest_increase))
+print("Greatest Decrease in Profits : " + str(worst_date) + " $" +str(greatest_decrease))
 
 
 '''  text
@@ -78,8 +82,8 @@ with open(output_path, "w",newline="") as csvfile:
     csvwriter.writerow(['Total Months: $' + str(total_months)])
     csvwriter.writerow(['Total: $' + str(total)])
     csvwriter.writerow(['Average Change: ' + str(average_change)])
-    csvwriter.writerow(["Greatest Increase in Profits :" + great_date + "$" +str(greatest_increase)])
-    csvwriter.writerow(["Greatest Decrease in Profits :" + worst_date + "$" +str(greatest_decrease)])
+    csvwriter.writerow(["Greatest Increase in Profits: " + great_date + " $" +str(greatest_increase)])
+    csvwriter.writerow(["Greatest Decrease in Profits:" + worst_date + " $" +str(greatest_decrease)])
     csvfile.colse()'''
 
 

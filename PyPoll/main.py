@@ -38,6 +38,9 @@ csvpath = os.path.join("Resources","election_data.csv")
 with open(csvpath, newline="") as csvfile:
     csvreader = csv.reader(csvfile, delimiter=",")
 
+    row_count = sum(1 for row in csvreader)
+    print(row_count)
+
     Correy = 0
     Khan = 0
     Li = 0
@@ -63,9 +66,9 @@ with open(csvpath, newline="") as csvfile:
         
         # The percentage of votes each candidate won
         Khan_percentage = round((Khan / sum_vote)*100, 3) # f string
-        Correy_percentage = (Correy / sum_vote)*100
-        Li_percentage = (Li / sum_vote)*100
-        OTooley_percentage = (OTooley / sum_vote)*100
+        Correy_percentage = round((Correy / sum_vote)*100, 3)
+        Li_percentage = round((Li / sum_vote)*100, 3)
+        OTooley_percentage = round((OTooley / sum_vote)*100, 3)
 
         # The total number of votes each candidate won  
         
