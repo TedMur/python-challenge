@@ -53,11 +53,11 @@ with open(csvpath, newline="") as csvfile:
         total_amount = total_amount + int(row[1])  #Total revenue
         
         
-average_change = total_amount / total_months     
+# average_change = total_amount / total_months     
 
 print('Financial Analysis')
 print('---------------------------------')
-print("Total Months: " + str(total_months))
+print("Total Months: " + round(str(total_months), 2))
 print("Total: $" + str(total_amount))
 print("Average Change: $" + str(average_change))
 print("Greatest Increase in Profits : " + str(great_date) + " $" +str(greatest_increase))
@@ -88,7 +88,7 @@ with open(output_path, "w",newline="") as csvfile:
 
 
 
-
+# hosted_in_us["goal"] = hosted_in_us["goal"].astype(float).map("${:,.2f}".format)
 
 
 

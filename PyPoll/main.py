@@ -38,8 +38,8 @@ csvpath = os.path.join("Resources","election_data.csv")
 with open(csvpath, newline="") as csvfile:
     csvreader = csv.reader(csvfile, delimiter=",")
 
-    row_count = sum(1 for row in csvreader)
-    print(row_count)
+    '''row_count = sum(1 for row in csvreader)
+    print(row_count)'''
 
     Correy = 0
     Khan = 0
@@ -62,6 +62,7 @@ with open(csvpath, newline="") as csvfile:
             OTooley = OTooley + 1
         
         # The total number of votes cast
+        
         sum_vote = sum_vote + 1
         
         # The percentage of votes each candidate won
@@ -77,7 +78,7 @@ with open(csvpath, newline="") as csvfile:
 
         # The winner of the election based on popular vote.  
 
-
+        
 
 
 
