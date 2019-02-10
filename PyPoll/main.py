@@ -73,19 +73,19 @@ with open(csvpath, newline="") as csvfile:
 
         
         # The winner of the election based on popular vote.  
-        winner = 
+        #winner = 
         
 
     print("Election Results")
     print("-------------------------")
-    print("Total Votes: ", sum_vote)
+    print(f"Total Votes: {sum_vote}")
     print("-------------------------")
-    print("Khan: " + str(Khan_percentage) + "% (" + str(Khan) + ")")
-    print("Correy: " + str(Correy_percentage) + "% (" + str(Correy) + ")")
-    print("Li: " + str(Li_percentage) + "% (" + str(Li) + ")")
-    print("O'Tooley: " + str(OTooley_percentage) + "% (" + str(OTooley) + ")")
+    print(f"Khan: {Khan_percentage}% ({Khan})")
+    print(f"Correy: {Correy_percentage}% ({Correy})")
+    print(f"Li: {Li_percentage}% ({Li})")
+    print(f"O'Tooley:  {OTooley_percentage}% ({OTooley})")
     print("-------------------------")
-    print("Winner: ")
+    print("Winner: {}")
     print("-------------------------")
         
 
