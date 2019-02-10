@@ -42,6 +42,7 @@ with open(csvpath, newline="") as csvfile:
 
 
     for row in csvreader:
+
         total_months = total_months + 1
         if (greatest_increase < float(row[1])): # Compare values before to find greatest incerase
             great_date = row[0]
@@ -78,7 +79,7 @@ with open(output_path, "w",newline="") as csvfile:
     csvwriter = csv.writer(csvfile, delimiter=",")
     csvwriter.writerow(['Financial Analysis'])
     csvwriter.writerow(['---------------------------------'])
-    csvwriter.writerow(['Total Months: $' + str(total_months)])
+    csvwriter.writerow([f"Total Months: {total_months}"])
     csvwriter.writerow(['Total: $' + str(total)])
     csvwriter.writerow(['Average Change: ' + str(average_change)])
     csvwriter.writerow(["Greatest Increase in Profits: " + great_date + " $" +str(greatest_increase)])
