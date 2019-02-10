@@ -42,7 +42,6 @@ with open(csvpath, newline="") as csvfile:
 
 
     for row in csvreader:
-        #print(float(row[1]))
         total_months = total_months + 1
         if (greatest_increase < float(row[1])): # Compare values before to find greatest incerase
             great_date = row[0]
